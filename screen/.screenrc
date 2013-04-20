@@ -1,0 +1,11 @@
+# Turn off copyright page / startup message
+startup_message off
+
+# Look and feel
+#caption always "%{= bb}%{+b w}Screen: %n | %h %=%t %c"
+
+# Took this from a separate source
+hardstatus alwayslastline "%{b kw}%H %{r}%1` %{w}| %{g}%c %{w}| %{y}%d.%m.%Y %{w}| %{-b kw}%u %-Lw%{= rW}%51> %n%f %t %{-}%+Lw%<"
+
+# Our warning of activity
+activity "Activity in %t(%n)"

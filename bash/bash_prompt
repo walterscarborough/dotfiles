@@ -1,0 +1,40 @@
+#!/bin/bash
+
+# bash_prompt
+
+# Check that terminfo exists before changing TERM var to xterm-256color
+# Prevents prompt flashing in Mac OS X 10.6 Terminal.app
+if [ -e /usr/share/terminfo/x/xterm-256color ]; then
+    export TERM='xterm-256color'
+fi
+
+# Git Branch Parsing
+parse_git_branch() {                                                          
+    git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/'         
+    #git branch 2> ' ' | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/'              
+}   
+
+# Colors
+Neon_Green='\[\033[01;32m\]'  # Neon Green
+Bold_Purple='\[\033[01;34m\]' # Bold Purple
+Bold_Red='\[\033[01;31m\]'    # Serious Red                                             
+White='\[\033[00m\]'          # Regular White
+
+# Prompt
+if [[ ${EUID} == 0 ]] ; then                                                  
+    # Root prompt                                                             
+    PS1+='$Bold_Red'
+    PS1+='\h'
+    PS1+='$Bold_Purple \W' 
+    PS1+='\$'
+    PS1+='$White '
+else                                                                          
+    # Regular prompt                                                          
+    PS1+="$Neon_Green\u" # Username
+    PS1+="@" # @
+    PS1+="\h" # Host
+    PS1+="$Bold_Purple \w" # Working directory
+    PS1+="$Bold_Red \$(parse_git_branch)"
+    PS1+="$Bold_Purple \$"
+    PS1+="$White "
+fi

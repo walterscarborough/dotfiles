@@ -1,0 +1,202 @@
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Plugin Settings
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+" Current plugins are:
+" Pathogen      - to manage vim plugins
+" Delimitmate   - autoclose parenthesis and quotes
+" NERDTree      - graphically browse file system
+" NERDTree-tabs - show NERDTree in all open tabs
+" Snipmate      - enable code completion
+" Sparkup       - rapidly write out and expand html
+" Supertab      - general autocompletion
+" Surround      - easily change quotes and brackets
+" Syntastic     - syntax checking
+" Tagbar        - show handy list of functions/methods in current file
+" tComment      - easily add/remove comments
+
+
+" Disable Vi compatibility
+set nocompatible
+
+" Pathogen plugin settings
+" Point to location of pathogen submodule (since it's not in .vim/autoload)
+runtime bundle/pathogen/autoload/pathogen.vim
+" Call pathogen plugin management
+execute pathogen#infect()
+call pathogen#helptags()
+filetype on
+filetype plugin indent on
+
+
+" NERDtree
+" - close vim if the only window left open is a NERDTree
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
+
+" Don't open nerdtree in gvim on startup!
+let g:nerdtree_tabs_open_on_gui_startup = 0
+
+
+" Sparkup
+let g:sparkupNextMapping = '<c-x>'
+
+
+" SuperTab
+let g:SuperTabDefaultCompletionType = "context"
+
+
+" Syntastic
+let g:syntastic_check_on_open = 1
+let g:syntastic_enable_signs = 1
+let g:syntastic_mode_map = {  'mode': 'active',
+                            \ 'active_filetypes':  [],
+                            \ 'passive_filetypes': []}
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Keymappings
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+" mapping to make tComment easier to use - allows you to use \c as a shortcut.
+map <leader>c <c-_><c-_>
+
+" use jj to escape out of insert mode (great idea!)
+" adapted from: http://stevelosh.com/blog/2010/09/coming-home-to-vim/
+inoremap jj <ESC>
+
+" Tab Shortcuts that won't interfere with OS X shortcuts
+" adapted from: http://stackoverflow.com/questions/6832364/gvim-switching-tabs-with-keyboard
+nnoremap <S-t> <Esc>:tabprev<CR>
+nnoremap <S-y> <Esc>:tabnext<CR>
+nnoremap <S-m> <Esc>:tabnew<CR>
+
+" Typos
+" adapted from: https://bitbucket.org/sjl/dotfiles/src/82049cfc9eb4/vim/vimrc
+command! -bang E e<bang>
+command! -bang Q q<bang>
+command! -bang W w<bang>
+command! -bang QA qa<bang>
+command! -bang Qa qa<bang>
+command! -bang Wa wa<bang>
+command! -bang WA wa<bang>
+command! -bang Wq wq<bang>
+command! -bang WQ wq<bang>
+
+" Remove trailing whitespace and stop trying to highlight all new spaces afterwards :)
+command! RemoveTrailingWhitespace %s:\s\+$:: | :nohl
+
+" Double all beginning line spaces - and stop all highlighting afterwards
+" adapted from: http://stackoverflow.com/questions/5217058/vim-reformat-a-python-file-to-have-4-space-indentations
+command! DoubleAllBeginningLineSpaces %s:^\s*:&&:g | :nohl
+
+
+""""""""""""""""
+" => F<num> Keys
+""""""""""""""""
+
+" Note:<F1> is help in both normal and input modes
+
+" NERDTree toggle
+nmap <silent> <special> <F2> :NERDTreeToggle<RETURN>
+
+" Use pastetoggle to enable/disable indentation
+set pastetoggle=<F3>
+
+" Tagbar
+nnoremap <silent> <F4> :TagbarToggle<CR>
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Colors and Fonts
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+syntax on
+
+" Highlight searches [use :noh to clear]
+set hlsearch
+set colorcolumn=78
+set background=dark
+set t_Co=256
+
+" Highlight current line                                                      
+set cursorline
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Search
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+" Ignore case when searching
+set ignorecase
+
+" Search both upper and lower case
+set smartcase
+
+" Show incremental search results
+set incsearch
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Centralize files
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+" Centralize backups, swapfiles and undo history                              
+set backupdir=$HOME/.vim/backups                                              
+set directory=$HOME/.vim/swaps                                                
+if exists("&undodir")                                                         
+    set undodir=$HOME/.vim/undo                                               
+endif                                                                         
+set viminfo+=n$HOME/.vim/.viminfo  
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => General / UI
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+" Show partial commands in status line                                    
+set showcmd                                                               
+" Show whether in insert or replace mode                                  
+set showmode 
+
+" Set utf8 as standard encoding and en_US as the standard language
+set encoding=utf8
+
+" Use Unix as the standard file type
+set ffs=unix,dos,mac
+
+" Backspace key seems to be messed up on OS X - this'll fix it
+set backspace=2
+
+" Show tabstops as >......
+"set list
+"set listchars=tab:>.
+
+" Show line numbers on side
+"set number
+
+"Display ruler when initially opening a file
+set ruler
+
+"set rulerformat=%l,%c%V%=%P
+
+" Keep all tabs open
+set showtabline=2
+
+" Always show the status line
+set laststatus=2
+
+" Format the status line
+" set statusline=\ %F%m%r%h\ %w\ \ CWD:\ %r%{getcwd()}%h\ \ \ Line:\ %l
+
+" Autoindent tabs
+set autoindent
+" Use 4 spaces for indentation
+set shiftwidth=4
+" Use 4 spaces for tab                                                        
+set tabstop=4  
+" Expand tab to spaces                                                        
+set expandtab
+
+
+" Faster refresh time for tagbar to update more frequently when traversing files
+set updatetime=500
