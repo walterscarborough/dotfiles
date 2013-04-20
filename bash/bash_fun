@@ -1,0 +1,10 @@
+#!/bin/bash
+
+# bash_fun
+
+# Show a fortune if it's installed
+if [ -e /opt/local/bin/fortune ]; then
+    echo -e '\n'
+    /opt/local/bin/fortune
+    echo -e '\n'
+fi

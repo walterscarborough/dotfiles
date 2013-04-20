@@ -21,7 +21,7 @@ Bold_Red='\[\033[01;31m\]'    # Serious Red
 White='\[\033[00m\]'          # Regular White
 
 # Prompt
-if [ $EUID == 0 ] ; then
+if [[ $EUID == 0 ]] ; then
     # Root prompt
     PS1="$Bold_Red"
     PS1+="\h"
