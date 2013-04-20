@@ -4,6 +4,8 @@
 
 # Directories to be prepended to PATH
 declare -a dirs_to_prepend=(
+    "/opt/local/bin"
+    "/opt/local/sbin"
     "/usr/local/bin" # Ensure that this bin always takes precedence over `/usr/bin`
 )
 
@@ -12,8 +14,6 @@ declare -a dirs_to_append=(
     "/usr/bin"
     "$HOME/bin"
     "$HOME/.dotfiles/bin"
-    "/opt/local/bin"
-    "/opt/local/sbin"
 )
 
 # Prepend directories to PATH

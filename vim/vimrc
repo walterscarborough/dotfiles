@@ -21,7 +21,7 @@ set nocompatible
 
 " Pathogen plugin settings
 " Point to location of pathogen submodule (since it's not in .vim/autoload)
-runtime bundle/pathogen/autoload/pathogen.vim
+runtime bundle/vim-pathogen/autoload/pathogen.vim
 " Call pathogen plugin management
 execute pathogen#infect()
 call pathogen#helptags()
@@ -119,7 +119,7 @@ set background=dark
 set t_Co=256
 
 " Highlight current line                                                      
-set cursorline
+" set cursorline
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -183,7 +183,7 @@ set ruler
 set showtabline=2
 
 " Always show the status line
-set laststatus=2
+"set laststatus=2
 
 " Format the status line
 " set statusline=\ %F%m%r%h\ %w\ \ CWD:\ %r%{getcwd()}%h\ \ \ Line:\ %l
