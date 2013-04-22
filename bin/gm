@@ -1,0 +1,3 @@
+#!/bin/bash
+
+grep --color=always -ri "$1" * | more -R
