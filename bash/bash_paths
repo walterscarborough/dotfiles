@@ -4,14 +4,14 @@
 
 # Directories to be prepended to PATH
 declare -a dirs_to_prepend=(
-    "/opt/local/bin"
-    "/opt/local/sbin"
+    "/usr/local/share/npm/bin"
+    "/usr/local/bin"
 )
 
 # Directories to be appended to PATH
 declare -a dirs_to_append=(
-    "$HOME/bin"
     "$HOME/.dotfiles/bin"
+    "$HOME/bin"
 )
 
 # Prepend directories to PATH
