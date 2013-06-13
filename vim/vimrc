@@ -9,12 +9,12 @@
 " NERDTree-tabs - show NERDTree in all open tabs
 " Snipmate      - enable code completion
 " Sparkup       - rapidly write out and expand html
-" Supertab      - general autocompletion
 " Surround      - easily change quotes and brackets
 " Syntastic     - syntax checking
 " Tagbar        - show handy list of functions/methods in current file
 " tComment      - easily add/remove comments
 
+" NOTE: Removed this for the time being - Supertab      - general autocompletion
 
 " Disable Vi compatibility
 set nocompatible
@@ -42,7 +42,7 @@ let g:sparkupNextMapping = '<c-x>'
 
 
 " SuperTab
-let g:SuperTabDefaultCompletionType = "context"
+"let g:SuperTabDefaultCompletionType = "context"
 
 
 " Syntastic
