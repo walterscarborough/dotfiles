@@ -53,3 +53,8 @@
 [submodule "vim/bundle/vim-jade"]
 	path = vim/bundle/vim-jade
 	url = https://github.com/digitaltoad/vim-jade.git
+    ignore = dirty
+[submodule "vim/bundle/clang_complete"]
+	path = vim/bundle/clang_complete
+	url = git://github.com/Rip-Rip/clang_complete.git
+    ignore = dirty
