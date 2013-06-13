@@ -3,7 +3,11 @@
 # OS X specific bash aliases
 
 # Get OS X Software Updates, Macports updates, and npm updates
-alias update='sudo softwareupdate -i -a; sudo port selfupdate; sudo port upgrade outdated; sudo npm update npm -g; sudo npm update -g'
+alias update="sudo softwareupdate -i -a; 
+              brew update; 
+              brew upgrade; 
+              npm update npm -g; 
+              npm update -g"
 
 # Show/hide hidden files in Finder
 alias showdotfiles="defaults write com.apple.finder AppleShowAllFiles -bool true && killall Finder"
