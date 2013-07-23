@@ -4,6 +4,7 @@
 
 # Directories to be prepended to PATH
 declare -a dirs_to_prepend=(
+    "/Users/walter/pear/bin"
     "/usr/local/share/npm/bin"
     "/usr/local/bin"
 )
