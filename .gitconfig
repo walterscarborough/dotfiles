@@ -1,0 +1,7 @@
+[user]
+	name  = Walter Scarborough
+	email = walter.scarborough@gmail.com
+[credential]
+	helper = osxkeychain
+[push]
+	default = simple
