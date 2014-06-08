@@ -1,9 +1,9 @@
 [submodule "vim/bundle/vim-surround"]
-	path = vim/bundle/vim-surround
+	path = vim/bundle/surround
 	url = git://github.com/tpope/vim-surround.git
     ignore = dirty
 [submodule "vim/bundle/vim-sparkup"]
-	path = vim/bundle/vim-sparkup
+	path = vim/bundle/sparkup
 	url = git://github.com/tristen/vim-sparkup.git
     ignore = dirty
 [submodule "vim/bundle/snipmate"]
@@ -11,7 +11,7 @@
 	url = git://github.com/msanders/snipmate.vim.git
     ignore = dirty
 [submodule "vim/bundle/tcomment_vim"]
-	path = vim/bundle/tcomment_vim
+	path = vim/bundle/tcomment
 	url = git://github.com/tomtom/tcomment_vim.git
     ignore = dirty
 [submodule "vim/bundle/nerdtree"]
@@ -19,7 +19,7 @@
 	url = git://github.com/scrooloose/nerdtree.git
     ignore = dirty
 [submodule "vim/bundle/vim-nerdtree-tabs"]
-	path = vim/bundle/vim-nerdtree-tabs
+	path = vim/bundle/nerdtree-tabs
 	url = git://github.com/jistr/vim-nerdtree-tabs.git
     ignore = dirty
 [submodule "vim/bundle/syntastic"]
@@ -43,11 +43,11 @@
 	url = git://github.com/majutsushi/tagbar.git
     ignore = dirty
 [submodule "vim/bundle/vim-pathogen"]
-	path = vim/bundle/vim-pathogen
+	path = vim/bundle/pathogen
 	url = git://github.com/tpope/vim-pathogen.git
     ignore = dirty
 [submodule "vim/bundle/vim-jade"]
-	path = vim/bundle/vim-jade
+	path = vim/bundle/jade
 	url = https://github.com/digitaltoad/vim-jade.git
     ignore = dirty
 [submodule "vim/bundle/clang_complete"]
@@ -55,5 +55,11 @@
 	url = git://github.com/Rip-Rip/clang_complete.git
     ignore = dirty
 [submodule "vim/bundle/vim-coffee-script"]
-	path = vim/bundle/vim-coffee-script
+	path = vim/bundle/coffeescript
 	url = https://github.com/kchmck/vim-coffee-script.git
+[submodule "vim/bundle/nerdcommenter"]
+	path = vim/bundle/nerdcommenter
+	url = https://github.com/scrooloose/nerdcommenter
+[submodule "vim/bundle/indent-guides"]
+	path = vim/bundle/indent-guides
+	url = https://github.com/nathanaelkane/vim-indent-guides
