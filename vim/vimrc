@@ -21,7 +21,7 @@ set nocompatible
 
 " Pathogen plugin settings
 " Point to location of pathogen submodule (since it's not in .vim/autoload)
-runtime bundle/pathogen/autoload/pathogen.vim
+runtime bundle/vim-pathogen/autoload/pathogen.vim
 " Call pathogen plugin management
 execute pathogen#infect()
 call pathogen#helptags()
