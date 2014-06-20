@@ -16,3 +16,9 @@
 
 [difftool]
     prompt = false
+
+[user]
+	name = Walter Scarborough
+	email = walter.scarborough@gmail.com
+[push]
+	default = simple
