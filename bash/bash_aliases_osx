@@ -26,3 +26,6 @@ alias emptytrash="sudo rm -rfv /Volumes/*/.Trashes; sudo rm -rfv ~/.Trash; sudo 
 
 # Open Chrome without web security - good for testing w/ CORS
 alias chrome_cors='open -a Google\ Chrome --args --disable-web-security'
+
+
+alias javac="LC_ALL=C javac -J-Dfile.encoding=utf8"

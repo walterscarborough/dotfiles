@@ -30,11 +30,3 @@ alias la="ls -hla ${colorflag}"
 alias grep='grep --color=auto --color=always'
 alias fgrep='fgrep --color=auto'
 alias egrep='egrep --color=auto'
-
-# IP addresses
-alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
-alias localip="ipconfig getifaddr en1"
-
-# Postgresql
-alias pgstart="pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start"
-alias pgstop="pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log stop"

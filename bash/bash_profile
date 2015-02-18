@@ -7,11 +7,11 @@ declare -a files=(
     $HOME/.dotfiles/bash/bash_exports     # Exports
     $HOME/.dotfiles/bash/bash_aliases     # Aliases
     $HOME/.dotfiles/bash/bash_aliases_osx # Aliases
-    $HOME/.dotfiles/bash/functions/*      # Functions
     $HOME/.dotfiles/bash/bash_prompt      # Custom bash prompt
     $HOME/.bash_profile.local             # Local and private settings not under version control (e.g. git credentials)
     $HOME/.dotfiles/bash/bash_paths       # Path modifications 
     $HOME/.dotfiles/bash/bash_fun         # Fun stuff :p
+    $(brew --prefix nvm)/nvm.sh
 )
 
 # If these files are readable, source them
@@ -31,3 +31,4 @@ bash_completion_path="/opt/local/etc/bash_completion"
 if [[ -r $bash_completion_path ]]; then
     source $bash_completion_path
 fi
+
