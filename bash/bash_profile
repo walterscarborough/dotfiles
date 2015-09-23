@@ -31,4 +31,3 @@ bash_completion_path="/opt/local/etc/bash_completion"
 if [[ -r $bash_completion_path ]]; then
     source $bash_completion_path
 fi
-

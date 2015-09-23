@@ -30,3 +30,6 @@ alias la="ls -hla ${colorflag}"
 alias grep='grep --color=auto --color=always'
 alias fgrep='fgrep --color=auto'
 alias egrep='egrep --color=auto'
+
+# Docker
+alias compose='docker-compose'
