@@ -47,8 +47,8 @@ let g:syntastic_enable_signs = 1
 let g:syntastic_mode_map = {  'mode': 'active',
                             \ 'active_filetypes':  [],
                             \ 'passive_filetypes': []}
-"let g:syntastic_javascript_checkers = ['jshint', 'jscs']
 let g:syntastic_javascript_checkers = ['jscs']
+let g:syntastic_aggregate_errors = 1
 
 " Tagbar
 "let g:tagbar_type_javascript = {
@@ -121,7 +121,7 @@ set colorcolumn=78
 set background=dark
 set t_Co=256
 
-" Highlight current line                                                      
+" Highlight current line
 " set cursorline
 
 
@@ -143,23 +143,23 @@ set incsearch
 " => Centralize files
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-" Centralize backups, swapfiles and undo history                              
-set backupdir=$HOME/.vim/backups                                              
-set directory=$HOME/.vim/swaps                                                
-if exists("&undodir")                                                         
-    set undodir=$HOME/.vim/undo                                               
-endif                                                                         
-set viminfo+=n$HOME/.vim/.viminfo  
+" Centralize backups, swapfiles and undo history
+set backupdir=$HOME/.vim/backups
+set directory=$HOME/.vim/swaps
+if exists("&undodir")
+    set undodir=$HOME/.vim/undo
+endif
+set viminfo+=n$HOME/.vim/.viminfo
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => General / UI
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-" Show partial commands in status line                                    
-set showcmd                                                               
-" Show whether in insert or replace mode                                  
-set showmode 
+" Show partial commands in status line
+set showcmd
+" Show whether in insert or replace mode
+set showmode
 
 " Set utf8 as standard encoding and en_US as the standard language
 set encoding=utf8
@@ -195,9 +195,9 @@ set showtabline=2
 set autoindent
 " Use 4 spaces for indentation
 set shiftwidth=4
-" Use 4 spaces for tab                                                        
-set tabstop=4  
-" Expand tab to spaces                                                        
+" Use 4 spaces for tab
+set tabstop=4
+" Expand tab to spaces
 set expandtab
 
 " Put new vsplit windows on right
