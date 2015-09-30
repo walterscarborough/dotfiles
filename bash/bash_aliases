@@ -27,9 +27,9 @@ alias l="ls -hl ${colorflag}"
 # List all files colorized in long format, including dot files
 alias la="ls -hla ${colorflag}"
 
-alias grep='grep --color=auto --color=always'
-alias fgrep='fgrep --color=auto'
-alias egrep='egrep --color=auto'
+alias grep='grep --color=auto --color=always -C 2 -n'
+alias fgrep='fgrep --color=auto -C 2 -n'
+alias egrep='egrep --color=auto -C 2 -n'
 
 # Docker
 alias compose='docker-compose'
