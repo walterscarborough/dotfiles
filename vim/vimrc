@@ -85,6 +85,12 @@ command! -bang WA wa<bang>
 command! -bang Wq wq<bang>
 command! -bang WQ wq<bang>
 
+" Move horizontal split window columns
+if bufwinnr(1)
+    map + <C-W><
+    map - <C-W>>
+endif
+
 " Remove trailing whitespace and stop trying to highlight all new spaces afterwards :)
 command! RemoveTrailingWhitespace %s:\s\+$:: | :nohl
 
