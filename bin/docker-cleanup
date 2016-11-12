@@ -1,0 +1,11 @@
+#!/bin/bash
+# Taken from https://lebkowski.name/docker-volumes/
+
+# Remove unused images:
+docker images --no-trunc | grep '<none>' | awk '{ print $3 }' | xargs docker rmi
+
+# Remove dead/exited containers:
+docker ps --filter status=dead --filter status=exited -aq | xargs docker rm -v
+
+# Remove leftover volumes
+docker volume ls -qf dangling=true | xargs docker volume rm
