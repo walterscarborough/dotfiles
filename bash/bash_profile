@@ -1,16 +1,16 @@
 #!/bin/bash
 
 # bash_profile
+source $HOME/.bash_local    # Local and private settings not under version control (e.g. git credentials)
 
 declare -a files=(
-    $HOME/.dotfiles/bash/bash_options     # Options
-    $HOME/.dotfiles/bash/bash_exports     # Exports
-    $HOME/.dotfiles/bash/bash_aliases     # Aliases
-    $HOME/.dotfiles/bash/bash_aliases_osx # Aliases
-    $HOME/.dotfiles/bash/bash_prompt      # Custom bash prompt
-    $HOME/.bash_profile.local             # Local and private settings not under version control (e.g. git credentials)
-    $HOME/.dotfiles/bash/bash_paths       # Path modifications 
-    $HOME/.dotfiles/bash/bash_fun         # Fun stuff :p
+    $DOTFILES_HOME/bash/bash_options     # Options
+    $DOTFILES_HOME/bash/bash_exports     # Exports
+    $DOTFILES_HOME/bash/bash_aliases     # Aliases
+    $DOTFILES_HOME/bash/bash_aliases_osx # Aliases
+    $DOTFILES_HOME/bash/bash_prompt      # Custom bash prompt
+    $DOTFILES_HOME/bash/bash_paths       # Path modifications
+    $DOTFILES_HOME/bash/bash_fun         # Fun stuff :p
     $(brew --prefix nvm)/nvm.sh
 )
 

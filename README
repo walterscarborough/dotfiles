@@ -1,0 +1,24 @@
+## Installation:
+
+Step 1.) Clone down the repo and its submodules (used for vim plugins).
+
+```
+git clone https://github.com/walterscarborough/dotfiles.git
+
+cd dotfiles 
+
+git submodule update --init
+```
+
+Step 2.) Create local bash file to set dotfile home path
+
+Create the .bash_local file and add the following to it:
+
+```
+#!/bin/bash
+DOTFILES_HOME=$HOME/dev/dotfiles
+```
+
+Feel free to set the DOTFILES_HOME variable to wherever you've cloned this repo down into.
+
+Step 3.) You will need to either copy or symlink these dotfiles to your home directory. I've written a tool for this: https://github.com/walterscarborough/dotkeepr. Alternatively, feel free to use any other tool that you prefer.

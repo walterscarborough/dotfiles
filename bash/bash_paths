@@ -12,7 +12,7 @@ declare -a dirs_to_prepend=(
 
 # Directories to be appended to PATH
 declare -a dirs_to_append=(
-    "$HOME/.dotfiles/bin"
+    "$DOTFILES_HOME/bin"
     "$HOME/bin"
 )
 
