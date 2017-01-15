@@ -71,7 +71,7 @@
 	url = https://github.com/suan/vim-instant-markdown.git
 [submodule "vim/bundle/ctrlp.vim"]
 	path = vim/bundle/ctrlp.vim
-	url = git@github.com:ctrlpvim/ctrlp.vim.git
+	url = https://github.com/ctrlpvim/ctrlp.vim.git
 [submodule "vim/bundle/typescript-vim"]
 	path = vim/bundle/typescript-vim
-	url = git@github.com:leafgarland/typescript-vim.git
+	url = https://github.com/leafgarland/typescript-vim.git
