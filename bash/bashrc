@@ -5,3 +5,6 @@
 source /etc/bashrc
 
 [ -n "$PS1" ] && source ~/.bash_profile
+
+# added by travis gem
+[ -f /Users/walter/.travis/travis.sh ] && source /Users/walter/.travis/travis.sh

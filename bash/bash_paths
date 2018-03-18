@@ -8,6 +8,7 @@ declare -a dirs_to_prepend=(
     "/usr/local/share/npm/bin"
     "/usr/local/bin"
     "/usr/local/opt/go/libexec/bin"
+    "/usr/local/sbin"
 )
 
 # Directories to be appended to PATH
